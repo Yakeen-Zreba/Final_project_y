@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/profile_rectangle_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/back_stu_prof"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left_arrow_48_white"
+            android:layout_marginStart="20dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/orange_rectangle"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/profile_image_girl" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            //textInput
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:layout_marginTop="10px">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textSize="25dp"
+                    android:layout_gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/text_input_stu_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/rectangle_text_input_stoke_dark_blue"
+                        android:drawableStart="@drawable/pass_icon_gray"
+                        android:drawablePadding="8dp"
+                        android:ems="10"
+                        android:hint="ID"
+                        android:inputType="number"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:textSize="18dp"
+                        android:maxLength="11"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/text_error_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text=" "
+                        android:textColor="@color/my_red"
+                        android:textSize="15dp" />
+
+
+                    <EditText
+                        android:id="@+id/text_input_stu_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/rectangle_text_input_stoke_dark_blue"
+                        android:drawableStart="@drawable/user_icon_gray"
+                        android:drawablePadding="8dp"
+                        android:ems="10"
+                        android:hint="Full Name"
+                        android:inputType="text"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:textSize="18dp"
+                        android:maxLength="30"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:id="@+id/text_error_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text=" "
+                        android:textColor="@color/my_red"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/text_input_stu_spec"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/rectangle_text_input_stoke_dark_blue"
+                        android:drawableStart="@drawable/spec_icon_gray"
+                        android:drawablePadding="8dp"
+                        android:ems="10"
+                        android:hint="Specialization"
+                        android:inputType="text"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:textSize="18dp"
+                        android:maxLength="25"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:id="@+id/text_error_spe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text=" "
+                        android:textColor="@color/my_red"
+                        android:textSize="15dp" />
+
+
+                    <TextView
+                        android:id="@+id/text_stu_edit_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Password"
+                        android:textColor="@color/my_Orange"
+                        android:textSize="18dp"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+    </LinearLayout>
+
+            //Buttons
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/stu_btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:text="Save"
+                    android:background="@drawable/rectangle_button_blue"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:elevation="35dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

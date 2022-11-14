@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/profile_rectangle_shape"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/left_arrow_48_white"
+                android:layout_marginStart="20dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/orange_rectangle"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/profile_image_girl"/>
+
+            <TextView
+                android:id="@+id/text_edit_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Photo"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="20sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_id"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/id_icon_black" />
+
+                <TextView
+                    android:id="@+id/text_view_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignBaseline="@id/image_id"
+                    android:layout_toRightOf="@id/image_id"
+                    android:text="ID........"
+                    android:textSize="20dp" />
+                <ImageView
+                    android:id="@+id/image_name"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/user_icon_black"
+                    android:layout_below="@id/image_id"/>
+
+                <TextView
+                    android:id="@+id/text_view_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/text_view_id"
+                    android:layout_alignBaseline="@id/image_id"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/image_name"
+                    android:text="User Name......"
+                    android:textSize="20dp" />
+                <ImageView
+                    android:id="@+id/image_spec"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/spec_icon_black"
+                    android:layout_below="@id/image_name"/>
+
+                <TextView
+                    android:id="@+id/text_view_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/text_view_name"
+                    android:layout_alignBaseline="@id/image_spec"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/image_spec"
+                    android:text="specialization...."
+                    android:textSize="20dp" />
+                <ImageView
+                    android:id="@+id/image_pass"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/pass_icon_black"
+                    android:layout_below="@id/image_spec"/>
+
+                <TextView
+                    android:id="@+id/text_view_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/text_view_spec"
+                    android:layout_alignBaseline="@id/image_pass"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/image_pass"
+                    android:text="************"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_marginBottom="30dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Edit"
+                android:background="@drawable/rectangle_button_blue"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:elevation="20dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Logout"
+                android:background="@drawable/rectangle_button_orange"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:elevation="20dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
