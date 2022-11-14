@@ -53,7 +53,7 @@ public class login_page extends Activity {
 
     /* to link the login page with the signup page (method)*/
     public void openSignupPage() {
-        Intent intent=new Intent(this, android.projects.signup_page.class);
+        Intent intent=new Intent(this,signup_page.class);
         startActivity(intent);
     }
 
