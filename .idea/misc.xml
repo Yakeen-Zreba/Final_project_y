@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/background_image.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/profile_rectangle_shape.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/rectangle_button_blue.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/rectangle_button_orange.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/rectangle_text_input_stoke_dark_blue.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/drawable/rectangle_text_input_stoke_orange.xml" value="0.18703703703703703" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/activity_main.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/edit_password_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/edit_stu_profile_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/edit_tr_profile_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/first_page.xml" value="0.1" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/login_page.xml" value="0.1" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/main_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/profile_stu_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/profile_tr_page.xml" value="0.221025641025641" />
+        <entry key="..\:/andriod projects/Final_project_y/app/src/main/res/layout/signup_page.xml" value="0.221025641025641" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_oval_shape.xml" value="0.2324074074074074" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_rectangle_shape.xml" value="0.23055555555555557" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_shape.xml" value="0.16203703703703703" />
