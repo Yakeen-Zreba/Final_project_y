@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileTr extends AppCompatActivity {
-    TextView text_edit_tr_photo, text_tr_id, text_tr_name, text_tr_phone, text_tr_pass;
+    TextView text_tr_photo, text_tr_id, text_tr_name, text_tr_phone, text_tr_pass;
     Button tr_btn_edit ,tr_logout;
 
     @Override
@@ -29,13 +29,15 @@ public class ProfileTr extends AppCompatActivity {
 
         setContentView(R.layout.profile_tr_page);
 
-        text_edit_tr_photo=(TextView) findViewById(R.id.text_edit_photo);
-        text_tr_id=(TextView) findViewById(R.id.text_view_id);
-        text_tr_name=(TextView) findViewById(R.id.text_view_name);
-        text_tr_phone=(TextView) findViewById(R.id.text_view_phone);
+        text_tr_photo=(TextView) findViewById(R.id.text_tr_photo);
+        text_tr_id=(TextView) findViewById(R.id.text_tr_id);
+        text_tr_name=(TextView) findViewById(R.id.text_tr_name);
+        text_tr_phone=(TextView) findViewById(R.id.text_tr_phone);
         text_tr_pass=(TextView) findViewById(R.id.text_view_pass);
 
-        tr_btn_edit=(Button) findViewById(R.id.tr_btn_edit);
+        tr_logout=(Button) findViewById(R.id.btn_edit_tr);
+
+        tr_btn_edit=(Button) findViewById(R.id.btn_logout_tr);
         tr_btn_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

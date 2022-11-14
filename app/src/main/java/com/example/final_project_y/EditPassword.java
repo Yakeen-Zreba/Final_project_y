@@ -51,7 +51,7 @@ public class EditPassword extends AppCompatActivity {
 
 
         //save button
-        btn_save=(Button) findViewById(R.id.btn_save);
+        btn_save=(Button) findViewById(R.id.btn_save_pass);
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
