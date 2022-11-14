@@ -35,7 +35,7 @@ public class ProfileTr extends AppCompatActivity {
         text_tr_phone=(TextView) findViewById(R.id.text_tr_phone);
         text_tr_pass=(TextView) findViewById(R.id.text_view_pass);
 
-        tr_logout=(Button) findViewById(R.id.btn_edit_tr);
+        tr_logout=(Button) findViewById(R.id.btn_logout_tr);
 
         tr_btn_edit=(Button) findViewById(R.id.btn_logout_tr);
         tr_btn_edit.setOnClickListener(new View.OnClickListener() {
