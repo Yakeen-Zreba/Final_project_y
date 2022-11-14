@@ -71,6 +71,8 @@ public class EditTrProfile extends AppCompatActivity {
         });
     }
 
+
+    //check Name
     public  boolean validateName() {
         String t_i_tr_name=text_input_tr_name.getText().toString();
 
@@ -84,7 +86,7 @@ public class EditTrProfile extends AppCompatActivity {
             return true;
         }
     }
-
+    //check phone
     public  boolean validatePhone() {
         String t_i_tr_phone=text_input_tr_phone.getText().toString();
 

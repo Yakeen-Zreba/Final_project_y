@@ -48,7 +48,7 @@
                 android:src="@drawable/profile_image_girl"/>
 
             <TextView
-                android:id="@+id/text_edit_photo"
+                android:id="@+id/text_stu_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit Photo"
@@ -85,7 +85,7 @@
                     android:src="@drawable/id_icon_black" />
 
                 <TextView
-                    android:id="@+id/text_view_id"
+                    android:id="@+id/text_view_stu_id"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_alignBaseline="@id/image_id"
@@ -102,10 +102,10 @@
                     android:layout_below="@id/image_id"/>
 
                 <TextView
-                    android:id="@+id/text_view_name"
+                    android:id="@+id/text_view_stu_name"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_below="@id/text_view_id"
+                    android:layout_below="@id/text_view_stu_id"
                     android:layout_alignBaseline="@id/image_id"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/image_name"
@@ -121,10 +121,10 @@
                     android:layout_below="@id/image_name"/>
 
                 <TextView
-                    android:id="@+id/text_view_spec"
+                    android:id="@+id/text_view_stu_spec"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_below="@id/text_view_name"
+                    android:layout_below="@id/text_view_stu_name"
                     android:layout_alignBaseline="@id/image_spec"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/image_spec"
@@ -140,10 +140,10 @@
                     android:layout_below="@id/image_spec"/>
 
                 <TextView
-                    android:id="@+id/text_view_pass"
+                    android:id="@+id/text_view_stu_pass"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_below="@id/text_view_spec"
+                    android:layout_below="@id/text_view_stu_spec"
                     android:layout_alignBaseline="@id/image_pass"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/image_pass"
@@ -163,7 +163,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/btn_edit"
+                android:id="@+id/btn_edit_stu"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Edit"
@@ -177,7 +177,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/btn_logout"
+                android:id="@+id/btn_logout_stu"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Logout"

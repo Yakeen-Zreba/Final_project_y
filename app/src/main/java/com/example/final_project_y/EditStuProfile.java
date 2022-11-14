@@ -68,8 +68,9 @@ public class EditStuProfile extends AppCompatActivity {
                 validateSpec();
             }
         });
-
     }
+
+    // check ID
     public  boolean validateId() {
         String t_i_tr_id=text_input_stu_id.getText().toString();
 
@@ -83,6 +84,8 @@ public class EditStuProfile extends AppCompatActivity {
             return true;
         }
     }
+
+    //check Name
     public  boolean validateName() {
         String t_i_tr_name=text_input_stu_name.getText().toString();
 
@@ -97,6 +100,7 @@ public class EditStuProfile extends AppCompatActivity {
         }
     }
 
+    //check Specialization
     public  boolean validateSpec() {
         String t_i_tr_phone=text_input_stu_spec.getText().toString();
 
