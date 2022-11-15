@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileStu extends AppCompatActivity {
     TextView text_stu_photo, text_stu_id, text_stu_name, text_stu_spe, text_stu_pass;
-    Button stu_btn_edit,stu_logout;;
+    Button stu_btn_edit,stu_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
