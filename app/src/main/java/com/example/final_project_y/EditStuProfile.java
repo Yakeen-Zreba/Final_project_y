@@ -3,6 +3,7 @@ package com.example.final_project_y;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -26,9 +27,15 @@ public class EditStuProfile extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        //----
+        //-----------------------------------------
 
+        //connect to layout
         setContentView(R.layout.edit_stu_profile_page);
+        //------------------------------------------
+
+        //to Disable landscape orientation
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //------------------------------------------------------
 
 
         text_input_stu_id=(EditText) findViewById(R.id.text_input_stu_id);
@@ -38,7 +45,7 @@ public class EditStuProfile extends AppCompatActivity {
         text_error_spe=(TextView) findViewById(R.id.text_error_spe);
         text_error_id=(TextView) findViewById(R.id.text_error_id);
 
-        //back arrow
+        //back arrow to profile
         back_stu_prof=(ImageView) findViewById(R.id.back_stu_prof);
         back_stu_prof.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,16 +54,17 @@ public class EditStuProfile extends AppCompatActivity {
                 startActivity(i_back_stu_pass);
             }
         });
+        //--------------------------------------------------------
 
         //edit password
         text_stu_edit_pass=(TextView) findViewById(R.id.text_stu_edit_pass);
         text_stu_edit_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_edit_stu_pass= new Intent(EditStuProfile.this,EditPassword.class);
-                startActivity(i_edit_stu_pass);
+                openEditPasswordPage();
             }
         });
+        //-------------------------------------------------------
 
         //save button
         stu_btn_save=(Button) findViewById(R.id.stu_btn_save);
@@ -69,6 +77,7 @@ public class EditStuProfile extends AppCompatActivity {
             }
         });
     }
+    //---------------------------------------------------------------
 
     // check ID
     public  boolean validateId() {
@@ -84,6 +93,7 @@ public class EditStuProfile extends AppCompatActivity {
             return true;
         }
     }
+   //----------------------------------------------------------------
 
     //check Name
     public  boolean validateName() {
@@ -99,6 +109,7 @@ public class EditStuProfile extends AppCompatActivity {
             return true;
         }
     }
+    //---------------------------------------------------------------
 
     //check Specialization
     public  boolean validateSpec() {
@@ -114,4 +125,13 @@ public class EditStuProfile extends AppCompatActivity {
             return true;
         }
     }
-}
+    //---------------------------------------------------------------
+
+    //to link the edit stu page with the edit password page (method)
+    private void openEditPasswordPage() {
+        Intent i_edit_stu_pass= new Intent(EditStuProfile.this,EditPassword.class);
+        startActivity(i_edit_stu_pass);
+    }
+    //--------------------------------------------------------------
+
+}/* the end of the activity*/

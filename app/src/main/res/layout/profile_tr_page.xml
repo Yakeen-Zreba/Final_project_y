@@ -18,7 +18,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_tr_to_main_page"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/left_arrow_48_white"

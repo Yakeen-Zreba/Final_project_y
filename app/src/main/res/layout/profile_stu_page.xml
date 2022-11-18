@@ -18,7 +18,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_stu_to_main_page"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/left_arrow_48_white"
@@ -43,6 +43,7 @@
             android:orientation="vertical"
             android:gravity="center">
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_stu_img"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/profile_image_girl"/>
@@ -97,7 +98,7 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:src="@drawable/user_icon_black"
                     android:layout_below="@id/image_id"/>
 
@@ -107,7 +108,7 @@
                     android:layout_height="32dp"
                     android:layout_below="@id/text_view_stu_id"
                     android:layout_alignBaseline="@id/image_id"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_toRightOf="@id/image_name"
                     android:text="User Name......"
                     android:textSize="20dp" />
@@ -116,7 +117,7 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:src="@drawable/spec_icon_black"
                     android:layout_below="@id/image_name"/>
 
@@ -126,29 +127,11 @@
                     android:layout_height="32dp"
                     android:layout_below="@id/text_view_stu_name"
                     android:layout_alignBaseline="@id/image_spec"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_toRightOf="@id/image_spec"
                     android:text="specialization...."
                     android:textSize="20dp" />
-                <ImageView
-                    android:id="@+id/image_pass"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/pass_icon_black"
-                    android:layout_below="@id/image_spec"/>
 
-                <TextView
-                    android:id="@+id/text_view_stu_pass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_below="@id/text_view_stu_spec"
-                    android:layout_alignBaseline="@id/image_pass"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/image_pass"
-                    android:text="************"
-                    android:textSize="20dp" />
             </RelativeLayout>
         </LinearLayout>
 

@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.final_project_y">
+    //permission for Internet
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Final_project_y">
 
+        //--------------------EditStuProfile-------------------------
         <activity
             android:name=".EditStuProfile"
             android:exported="true">
+
         </activity>
+        //---------------------EditTrProfile------------------------
         <activity
             android:name=".EditTrProfile"
             android:exported="true">
+
         </activity>
+        //---------------------ProfileTr------------------------
         <activity
             android:name=".ProfileTr"
+            android:exported="true">
+
+        </activity>
+        //----------------------ProfileStu-----------------------
+        <activity
+            android:name=".ProfileStu"
+            android:exported="true">
+
+        </activity>
+        //--------------------EditPassword-------------------------
+        <activity
+            android:name=".EditPassword"
+            android:exported="true">
+        </activity>
+        //----------------------main_page-----------------------
+        <activity
+            android:name=".main_page"
+            android:exported="true">
+        </activity>
+        //-------------------login_page--------------------------
+        <activity
+            android:name=".login_page"
+            android:exported="true">
+        </activity>
+        //--------------------first_page-------------------------
+        <activity
+            android:name=".first_page"
+            android:exported="true">
+        </activity>
+        //--------------------signup_page-------------------------
+        <activity
+            android:name=".signup_page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,14 +67,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ProfileStu"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".EditPassword"
-            android:exported="true">
-        </activity>
+
     </application>
 
 </manifest>

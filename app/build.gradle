@@ -45,9 +45,13 @@ dependencies {
     //Validation
     implementation 'com.basgeekball:awesome-validation:4.3'
 
-    //shadow
-   // implementation 'androidx.cardview:cardview:1.0.0'
 
-//    inputText
-//    implementation 'com.google.android.material:material:1.2.0-alpha03'
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //is the best Image view Library for View photo from link
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //for Okhttp Library to fetch user data from Mysql Database using PHP
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
 }

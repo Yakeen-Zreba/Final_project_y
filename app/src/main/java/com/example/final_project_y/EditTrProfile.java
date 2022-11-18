@@ -1,6 +1,7 @@
 package com.example.final_project_y;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -31,17 +32,23 @@ public class EditTrProfile extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        //----
+        //------------------------------------------------------
 
+        //connect to the layout
         setContentView(R.layout.edit_tr_profile_page);
+        //------------------------------------------------------
+
+        //to Disable landscape orientation
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //------------------------------------------------------
 
         text_input_tr_name=(EditText) findViewById(R.id.text_input_tr_name);
         text_input_tr_phone=(EditText) findViewById(R.id.text_input_tr_phone);
         text_error_name=(TextView) findViewById(R.id.text_error_name);
         text_error_phone=(TextView) findViewById(R.id.text_error_phone);
 
-        //back arrow
-        back_tr_prof=(ImageView) findViewById(R.id.back_tr_prof);
+        //back arrow to profile
+        back_tr_prof=(ImageView) findViewById(R.id.back_tr_to_prof);
         back_tr_prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,16 +56,18 @@ public class EditTrProfile extends AppCompatActivity {
                 startActivity(i_back_tr_pass);
             }
         });
+        //------------------------------------------------------
 
         //edit password
         text_tr_edit_pass=(TextView) findViewById(R.id.text_tr_edit_pass);
         text_tr_edit_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_edit_tr_pass= new Intent(EditTrProfile.this,EditPassword.class);
-                startActivity(i_edit_tr_pass);
+                openEditPasswordPage();
             }
         });
+        //-----------------------------------------------------
+
 
         //save button
         tr_btn_save=(Button) findViewById(R.id.tr_btn_save);
@@ -69,10 +78,13 @@ public class EditTrProfile extends AppCompatActivity {
                 validatePhone();
             }
         });
+        //------------------------------------------------------
+
+
     }
 
 
-    //check Name
+    //function to check Name
     public  boolean validateName() {
         String t_i_tr_name=text_input_tr_name.getText().toString();
 
@@ -86,7 +98,9 @@ public class EditTrProfile extends AppCompatActivity {
             return true;
         }
     }
-    //check phone
+    //-------------------------------------------------------
+
+    //function to check phone
     public  boolean validatePhone() {
         String t_i_tr_phone=text_input_tr_phone.getText().toString();
 
@@ -105,4 +119,12 @@ public class EditTrProfile extends AppCompatActivity {
             return true;
         }
     }
+    //----------------------------------------------------------
+
+    //to link the edit tr page with the edit password page (method)
+    private void openEditPasswordPage() {
+        Intent i_edit_tr_pass= new Intent(EditTrProfile.this,EditPassword.class);
+        startActivity(i_edit_tr_pass);
+    }
+    //--------------------------------------------------------------
 }
