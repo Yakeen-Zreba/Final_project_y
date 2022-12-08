@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/background_image.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/background_image1.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/card.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/circle_blue_button.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/dark_blue_radius_background.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/dark_blue_radus_background.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/hedar_card.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/line.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/main_card.xml" value="0.290625" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/main_circle.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/material_container.xml" value="0.290625" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_oval_shape.xml" value="0.2324074074074074" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_rectangle_shape.xml" value="0.23055555555555557" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/profile_shape.xml" value="0.16203703703703703" />
@@ -16,15 +28,24 @@
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/rectangle_text_input_stoke_dark_blue.xml" value="0.2222222222222222" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/rectangle_text_input_stoke_orange.xml" value="0.290625" />
         <entry key="..\:/project/final_project_y/app/src/main/res/drawable/rectangle_text_input_stoke_red.xml" value="0.290625" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/round_button_darkblue.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/round_button_darkblue_15.xml" value="0.2537037037037037" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/drawable/white_radius_background.xml" value="0.2537037037037037" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/assignment_stu_page.xml" value="0.18018018018018017" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/assignment_tr_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/card_item_inside_group.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/edet_password_page.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/edit_password_page.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/edit_profile_tr_page.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/edit_stu_profile_page.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/edit_tr_profile_page.xml" value="0.27447916666666666" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/first_page.xml" value="0.2" />
-        <entry key="..\:/project/final_project_y/app/src/main/res/layout/login_page.xml" value="0.14375" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/inside_group_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/login_page.xml" value="0.2" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/main_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/material.xml" value="0.27447916666666666" />
+        <entry key="..\:/project/final_project_y/app/src/main/res/layout/material_page.xml" value="0.264" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/profile_page.xml" value="0.264" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/profile_stu_page.xml" value="0.2" />
         <entry key="..\:/project/final_project_y/app/src/main/res/layout/profile_tr_page.xml" value="0.27447916666666666" />

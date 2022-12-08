@@ -12,5 +12,7 @@
     <color name="my_dark_green">#53744A</color>
     <color name="my_Orange">#FFBA5F</color>
     <color name="my_gray">#9C9C9C</color>
+    <color name="my_light_blue">#A4D2F0</color>
+    <color name="my_vlight_blue">#CFECFF</color>
 
 </resources>

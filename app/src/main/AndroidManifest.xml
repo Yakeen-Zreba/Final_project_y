@@ -61,10 +61,33 @@
         <activity
             android:name=".signup_page"
             android:exported="true">
+        </activity>
+        //--------------------material_page-------------------------
+        <activity
+            android:name=".materialPage"
+            android:exported="true">
+
+        </activity>
+        //--------------------assignment_Tr_page-------------------------
+        <activity
+            android:name=".assignmentStuPage"
+            android:exported="true">
+
+        </activity>
+        //--------------------assignment_Stu_page-------------------------
+        <activity
+            android:name=".assignmentTrPage"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        //--------------------inside_group_page-------------------------
+        <activity
+            android:name=".insideGroupPage"
+            android:exported="true">
+
         </activity>
 
 

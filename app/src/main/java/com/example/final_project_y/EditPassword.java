@@ -41,6 +41,7 @@ public class EditPassword extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //------------------------------------------------------
 
+        //init views
         text_input_pass=(EditText ) findViewById(R.id.text_input_pass);
         text_input_confirm_pass=(EditText ) findViewById(R.id.text_input_conf_pass);
         text_error_pass=(TextView) findViewById(R.id.text_error_pass);

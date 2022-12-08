@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    /************nav bar*******************/
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/my_dark_blue">
+        <ImageView
+            android:id="@+id/back_to_inside_group_page"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left_arrow_48_white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_dark"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+    /*/////////////end nav bar//////////////*/
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assignments"
+            android:textSize="32dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        /***********card**************/
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:background="@drawable/white_radius_background"
+            android:elevation="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dark_blue_radius_background">
+                <TextView
+                    android:id="@+id/text_view_stu_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Student name"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/text_view_stu_id"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Student ID"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:layout_marginEnd="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/text_view_assignment_tr_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="24dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.9"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_open_assignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Lorem ipsum is placeholder text commonly used in the graphic, print..."
+                    android:background="@drawable/white_radius_background"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:elevation="20dp"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        /*////////end card/////////*/
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
