@@ -1,10 +1,13 @@
 package com.example.final_project_y;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class main_page extends AppCompatActivity {
+public class MainPage extends AppCompatActivity {
+    ImageView main_pic;
+    Button btn_group1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +52,27 @@ public class main_page extends AppCompatActivity {
 
         /*--------------------------------------------------------------------------*/
 
+        /*init views*/
+        main_pic=(ImageView) findViewById(R.id.main_pic);
+        btn_group1=(Button) findViewById(R.id.btn_group1);
+
+        //Back arrow to main page
+        main_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i_back_main_page= new Intent(MainPage.this,ProfileStu.class);
+                startActivity(i_back_main_page);
+            }
+        });
+
+        //go to inside_group
+        btn_group1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i_go_to_inside_group= new Intent(MainPage.this, InsideGroupPage.class);
+                startActivity(i_go_to_inside_group);
+            }
+        });
 
 
     }

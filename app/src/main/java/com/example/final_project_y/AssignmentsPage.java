@@ -12,15 +12,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class assignmentTrPage extends AppCompatActivity {
+public class AssignmentsPage extends AppCompatActivity {
 
-    private TextView text_view_assignment_tr_title ,text_view_stu_name,text_view_stu_id;
+    private TextView text_view_assignment_stu_title;
     private Button btn_open_assignment;
     private ImageView back_to_inside_group_page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // remove title bar and hide the action bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -28,7 +29,7 @@ public class assignmentTrPage extends AppCompatActivity {
         //------------------------------------------
 
         //connect to layout
-        setContentView(R.layout.assignment_stu_page);
+        setContentView(R.layout.assignments_page);
         //-------------------------------------------
 
         //to Disable landscape orientation
@@ -36,9 +37,7 @@ public class assignmentTrPage extends AppCompatActivity {
         //------------------------------------------------------
 
         //init views
-        text_view_assignment_tr_title=(TextView) findViewById(R.id.text_view_assignment_tr_title);
-        text_view_stu_name=(TextView) findViewById(R.id.text_view_stu_name);
-        text_view_stu_id=(TextView) findViewById(R.id.text_view_stu_id);
+        text_view_assignment_stu_title=(TextView) findViewById(R.id.text_view_assignment_stu_title);
         btn_open_assignment=(Button) findViewById(R.id.btn_open_assignment);
 
         //back arrow to profile
@@ -46,7 +45,7 @@ public class assignmentTrPage extends AppCompatActivity {
         back_to_inside_group_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_back_inside_group_page= new Intent(assignmentTrPage.this,insideGroupPage.class);
+                Intent i_back_inside_group_page= new Intent(AssignmentsPage.this, InsideGroupPage.class);
                 startActivity(i_back_inside_group_page);
             }
         });

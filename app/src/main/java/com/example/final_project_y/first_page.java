@@ -5,12 +5,23 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
-public class first_page extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class first_page extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // remove title bar and hide the action bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        //------------------------------------------
+
         setContentView(R.layout.first_page);
 
         /*to Disable landscape orientation*/
@@ -27,19 +38,6 @@ public class first_page extends Activity {
 
         /*--------------------------------------------------------------------------*/
 
-        /*to add onclick event to sign up button*/
-        Button signupbtn = findViewById(R.id.sginupButton);
-        signupbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSignupPage();
-            }
-        });/* the of onclick event to sign up button*/
-
-
-
-
-
     }/* the end of on create*/
     /*--------------------------------------------------------------------------*/
 
@@ -50,12 +48,7 @@ public class first_page extends Activity {
         startActivity(intent);
     }
 
-    /*--------------------------------------------------------------------------*/
-    /* to link the first page with the signup page (method)*/
-    public void openSignupPage() {
-        Intent intent=new Intent(this,signup_page.class);
-        startActivity(intent);
-    }
+
 
 
 

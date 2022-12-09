@@ -6,9 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
 
         /*blue card desgin*/
         <ImageView
@@ -22,16 +20,15 @@
         <LinearLayout
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentRight="true"
+            android:gravity="center">
 
-
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/main_pic"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/teacher" />
+                android:src="@drawable/profile_image_girl"/>
+
         </LinearLayout>
 
 
@@ -82,24 +79,6 @@
             android:layout_below="@id/main_card"
             android:orientation="horizontal"
             android:layout_centerHorizontal="true">
-            <SearchView
-                android:id="@+id/searchView"
-                android:layout_width="224dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:iconifiedByDefault="false"
-                android:queryHint="Enter Group Code" />
-            <Button
-                android:id="@+id/join"
-                android:layout_width="95dp"
-                android:layout_height="50dp"
-                android:layout_toRightOf="@id/searchView"
-                android:layout_below="@id/main_card"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_button_darkblue_15"
-                android:text="join"
-                android:textColor="#ffffff"
-                />
 
         </LinearLayout>
 
@@ -111,22 +90,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linear1"
-           android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
-            >
+            android:layout_marginStart="30dp">
 
             <TextView
                 android:id="@+id/group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Groups "
-                android:textSize="28dp"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                />
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
             <View
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>
@@ -139,66 +117,63 @@
             android:layout_below="@id/linear2"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="319dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="109dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/background_image"
-                android:text="Data\nBase"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:paddingTop="20dp"
-                android:paddingLeft="30dp"
-                android:gravity="top"
-                />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="319dp"
+                android:background="@drawable/dark_blue_radius_background"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:elevation="10dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"/>
+                <Button
+                    android:id="@+id/btn_group1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_radius_background"
+                    android:text="DataBase"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="109dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/round_button_darkblue_15_withimage"
-                android:text="Java"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:paddingTop="20dp"
-                android:paddingLeft="30dp"
-                android:gravity="top"
-                />
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="319dp"
-                android:layout_height="109dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/background_image1"
-                android:text="English"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:paddingTop="20dp"
-                android:paddingLeft="30dp"
-                android:gravity="top"
-                />
-
-
-
-
-
+                android:background="@drawable/dark_blue_radius_background"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:elevation="10dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/btn_group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_radius_background"
+                    android:text="Java"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    />
+            </LinearLayout>
 
 
         </LinearLayout>
-
-
-
-
-
-
-
 
     </RelativeLayout>
 
