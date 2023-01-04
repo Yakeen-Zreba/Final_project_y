@@ -37,8 +37,8 @@ public class AssignmentsPage extends AppCompatActivity {
         //------------------------------------------------------
 
         //init views
-        text_view_assignment_stu_title=(TextView) findViewById(R.id.text_view_assignment_stu_title);
-        btn_open_assignment=(Button) findViewById(R.id.btn_open_assignment);
+        //text_view_assignment_stu_title=(TextView) findViewById(R.id.assignment_title_tv);
+        //btn_open_assignment=(Button) findViewById(R.id.btn_open_assignment);
 
         //back arrow to profile
         back_to_inside_group_page=(ImageView) findViewById(R.id.back_to_inside_group_page);

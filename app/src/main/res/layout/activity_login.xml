@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+
+
+    /*the logo place*/
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/logo_light"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+
+
+    /******************************************************************/
+    /* welcome Text* /
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="177dp"
+        android:text=" Welcome"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    /* Back Word Text*/
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:text=" Back!"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:layout_below="@id/welcome"
+        />
+    /******************************************************************/
+    /*to add scrolling to the edit texts*/
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/back"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:id="@+id/container_linear">
+
+
+        /******************************************************************/
+        /*full name*/
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_shape"
+            android:padding="10dp">
+            /* id Edit Text*/
+
+            <ImageView
+                android:id="@+id/icon_user"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/user" />
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:hint="Full Name"
+                android:maxLength="30"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+        /*the end of linear for input image and board*/
+
+        /******************************************************************/
+        /*password*/
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_shape"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/icon_pass"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/password" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+        /*the end of linear for input image and board*/
+
+        /******************************************************************/
+
+
+        /******************************************************************/
+
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="340dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/edText2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/round_button_darkblue"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:cornerRadius="25dp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        >
+
+        <TextView
+            android:id="@+id/createText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Create an account "
+            android:textColor="#000000"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/signupText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/createText"
+            android:text=" Signup "
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

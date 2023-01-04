@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <include android:id="@+id/nav" layout="@layout/item_nav_bar" />
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/nav" layout="@layout/item_nav_bar"/>
 
     <LinearLayout
-        android:id="@+id/group_tag"
+        android:id="@+id/group_name"
         android:layout_below="@id/nav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="160dp"
         android:background="@drawable/dark_blue_radius_background"
         android:elevation="10dp"
-        android:paddingBottom="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp">
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:baselineAligned="false">
 
 
         <LinearLayout
@@ -29,29 +27,29 @@
             android:paddingTop="20dp">
 
             <TextView
-                android:id="@+id/text_view_g_name"
+                android:id="@+id/g_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Group Name"
                 android:textSize="24sp"
                 android:layout_marginBottom="10dp"
-                android:paddingStart="20dp"
+                android:paddingHorizontal="20dp"
                 android:textColor="@color/white"/>
             <TextView
-                android:id="@+id/text_view_tr_name"
+                android:id="@+id/t_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Teacher Name"
                 android:textSize="16sp"
-                android:paddingStart="20dp"
+                android:paddingHorizontal="20dp"
                 android:textColor="@color/white"/>
             <TextView
-                android:id="@+id/text_view_g_no"
+                android:id="@+id/g_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Group code"
                 android:textSize="16sp"
-                android:paddingStart="20dp"
+                android:paddingHorizontal="20dp"
                 android:textColor="@color/white"/>
 
 
@@ -74,22 +72,22 @@
         </LinearLayout>
 
     </LinearLayout>
-    /**********************/
+
 
     <LinearLayout
-        android:layout_below="@+id/group_tag"
+        android:id="@+id/btns"
+        android:layout_below="@id/group_name"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-
-        android:orientation="horizontal">
+        android:layout_height="350dp"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginStart="20dp"
-            android:paddingEnd="5dp">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_assignment"
@@ -97,10 +95,10 @@
                 android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:text="Assignments"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:background="@drawable/vlight_blue_radius_background"
                 android:textColor="@color/my_dark_blue"
-                android:padding="18dp"
+                android:layout_margin="5dp"
                 android:textAllCaps="false"/>
 
             <Button
@@ -109,11 +107,11 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:text="Materials"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:background="@drawable/vlight_orange_radius_background"
                 android:textColor="@color/my_dark_blue"
                 android:padding="18dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="5dp"
                 android:textAllCaps="false"/>
 
         </LinearLayout>
@@ -122,19 +120,17 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginEnd="20dp"
-            android:paddingStart="5dp">
+            android:orientation="vertical">
             <Button
                 android:id="@+id/btn_enquiry"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:text="Enquiries"
-                android:textSize="18dp"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
                 android:background="@drawable/vlight_orange_radius_background"
                 android:textColor="@color/my_dark_blue"
-                android:padding="18dp"
                 android:textAllCaps="false"/>
             <Button
                 android:id="@+id/btn_notification"
@@ -142,12 +138,15 @@
                 android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:text="Notifications"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:background="@drawable/vlight_blue_radius_background"
                 android:textColor="@color/my_dark_blue"
-                android:padding="18dp"
-                android:layout_marginTop="10dp"
+             android:layout_margin="5dp"
                 android:textAllCaps="false"/>
         </LinearLayout>
+
+
+
     </LinearLayout>
+
 </RelativeLayout>

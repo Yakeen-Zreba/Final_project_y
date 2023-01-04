@@ -45,7 +45,7 @@ public class ProfileStu extends AppCompatActivity {
         profile_stu_img = (ImageView) findViewById(R.id.profile_stu_img);
 
         //Back arrow to main page
-        back_stu_to_main_page = (ImageView) findViewById(R.id.back_stu_to_main_page);
+        //back_stu_to_main_page = (ImageView) findViewById(R.id.back_stu_to_main_page);
         back_stu_to_main_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -54,7 +54,7 @@ public class MainPage extends AppCompatActivity {
 
         /*init views*/
         main_pic=(ImageView) findViewById(R.id.main_pic);
-        btn_group1=(Button) findViewById(R.id.btn_group1);
+//        /btn_group1=(Button) findViewById(R.id.btn_group1);
 
         //Back arrow to main page
         main_pic.setOnClickListener(new View.OnClickListener() {
