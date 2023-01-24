@@ -44,7 +44,7 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
     private GroupsDataAdapter mAdapter;
     Context context;
     SessionManager session;
-    private ImageView back_to_main_page;
+    private ImageView main_pic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,11 +79,11 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
             GrabAllGroups();
         }
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        back_to_main_page=(ImageView) findViewById(R.id.back_to_main_page);
+        main_pic = (ImageView) findViewById(R.id.main_pic);
 
         //Back arrow to main page
-        back_to_main_page.setOnClickListener(view -> {
-            super.onBackPressed();
+        main_pic.setOnClickListener(view -> {
+            startActivity(new Intent(GroupsActivity.this,ProfileActivity.class));
         });
     }
 

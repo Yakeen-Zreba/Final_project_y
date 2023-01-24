@@ -20,12 +20,15 @@
             android:layout_weight="5"
             android:orientation="vertical"
             android:gravity="center">
-            <de.hdodenhof.circleimageview.CircleImageView
+
+            <com.android.volley.toolbox.NetworkImageView
                 android:id="@+id/profile_stu_img"
+                android:src="@drawable/profile_image_girl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/profile_image_girl"/>
-
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                />
             <TextView
                 android:id="@+id/text_stu_photo"
                 android:layout_width="wrap_content"

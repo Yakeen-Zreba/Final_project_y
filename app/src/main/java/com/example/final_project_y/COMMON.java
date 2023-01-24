@@ -8,6 +8,7 @@ public class COMMON {
     public static  String ASSIGNMENTS_URL = BASE_URL + "assignments";
     public static  String MATERIALS_URL = BASE_URL + "materials";
     public static  String LOGIN_URL = BASE_URL + "login";
+    public static  String PROFILE_URL = BASE_URL + "profile";
 
 
 

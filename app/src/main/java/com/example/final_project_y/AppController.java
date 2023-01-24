@@ -5,6 +5,7 @@ import android.text.TextUtils;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 public class AppController  extends Application {
@@ -14,6 +15,8 @@ public class AppController  extends Application {
     private RequestQueue mRequestQueue;
 
     private static AppController mInstance;
+
+    private ImageLoader imageLoader;
 
     @Override
     public void onCreate() {
@@ -25,6 +28,14 @@ public class AppController  extends Application {
         return mInstance;
     }
 
+    public ImageLoader getImageLoader() {
+        getRequestQueue();
+        if (imageLoader == null) {
+            imageLoader = new ImageLoader(this.mRequestQueue, new LruBitmapCache());
+        }
+
+        return this.imageLoader;
+    }
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             mRequestQueue = Volley.newRequestQueue(getApplicationContext());
