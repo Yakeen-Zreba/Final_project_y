@@ -1,6 +1,7 @@
 package com.example.final_project_y.activity;
 
 import static com.android.volley.Request.Method.GET;
+import static com.example.final_project_y.COMMON.AVATAR_LINK;
 import static com.example.final_project_y.COMMON.FILES_LINK;
 import static com.example.final_project_y.COMMON.GROUPS_URL;
 import static com.example.final_project_y.COMMON.PROFILE_URL;
@@ -114,7 +115,7 @@ public class ProfileActivity extends AppCompatActivity {
             name_tv.setText(name);
             spec_tv.setText(specialization);
             id_tv.setText(student_id);
-            loadImage("https://picsum.photos/400");// + FILES_LINK + image_link);
+            loadImage(  AVATAR_LINK + image_link);
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -47,7 +47,7 @@ public class AssignmentsDataAdapter extends RecyclerView.Adapter<AssignmentsData
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Assignment Assignment = AssignmentsList.get(position);
-        holder.title.setText(Assignment.getTitle());
+        holder.open_btn.setText(Assignment.getTitle());
 
 
     }
