@@ -99,9 +99,6 @@
             android:name=".ProfileStu"
             android:exported="true" />
         <activity
-            android:name=".MainPage"
-            android:exported="true" />
-        <activity
             android:name=".first_page"
             android:exported="true" />
         <activity

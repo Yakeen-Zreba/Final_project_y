@@ -2,13 +2,10 @@ package com.example.final_project_y.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,10 +15,8 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.example.final_project_y.AppController;
 import com.example.final_project_y.COMMON;
-import com.example.final_project_y.MainPage;
 import com.example.final_project_y.R;
 import com.example.final_project_y.SessionManager;
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
