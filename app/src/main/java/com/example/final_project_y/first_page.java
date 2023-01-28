@@ -19,7 +19,7 @@ public class first_page extends AppCompatActivity {
         // remove title bar and hide the action bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar();
+        getSupportActionBar().hide();
         //------------------------------------------
 
         setContentView(R.layout.first_page);
