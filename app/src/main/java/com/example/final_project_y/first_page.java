@@ -44,8 +44,8 @@ public class first_page extends AppCompatActivity {
 
     /* to link the first page with the login page method*/
     public void openLoginPage() {
-        Intent intent=new Intent(this,login_page.class);
-        startActivity(intent);
+//        Intent intent=new Intent(this,login_page.class);
+    //    startActivity(intent);
     }
 
 

@@ -45,8 +45,8 @@ public class InsideGroupPage extends AppCompatActivity {
         back_to_main_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_back_stu_to_prof= new Intent(InsideGroupPage.this, MainPage.class);
-                startActivity(i_back_stu_to_prof);
+                //Intent i_back_stu_to_prof= new Intent(InsideGroupPage.this, MainPage.class);
+                //startActivity(i_back_stu_to_prof);
             }
         });
 
@@ -63,8 +63,8 @@ public class InsideGroupPage extends AppCompatActivity {
         btn_material.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_to_material= new Intent(InsideGroupPage.this, MaterialsPage.class);
-                startActivity(i_to_material);
+              //  Intent i_to_material= new Intent(InsideGroupPage.this, MaterialsPage.class);
+             //   startActivity(i_to_material);
             }
         });
 

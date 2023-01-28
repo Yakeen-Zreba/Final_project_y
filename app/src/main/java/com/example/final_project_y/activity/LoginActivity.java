@@ -71,8 +71,8 @@ public class LoginActivity extends AppCompatActivity {
 
     /* to link the login page with the main page (method)*/
     public void openMainPage() {
-        Intent intent=new Intent(this, MainPage.class);
-        startActivity(intent);
+    //    Intent intent=new Intent(this, MainPage.class);
+    //    startActivity(intent);
     }
 
 /*--------------------------------------------------------------------------*/

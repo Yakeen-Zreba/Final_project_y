@@ -99,9 +99,6 @@
             android:name=".first_page"
             android:exported="true" />
         <activity
-            android:name=".MaterialsPage"
-            android:exported="true" />
-        <activity
             android:name=".AssignmentsPage"
             android:exported="true" />
         <activity
