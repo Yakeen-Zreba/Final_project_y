@@ -121,23 +121,13 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <Button
-                android:id="@+id/btn_enquiry"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:text="Enquiries"
-                android:textSize="18sp"
-                android:layout_margin="5dp"
-                android:background="@drawable/vlight_orange_radius_background"
-                android:textColor="@color/my_dark_blue"
-                android:textAllCaps="false"/>
+
             <Button
                 android:id="@+id/btn_notification"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:layout_width="match_parent"
-                android:text="Notifications"
+                android:text="Announcement"
                 android:textSize="18sp"
                 android:background="@drawable/vlight_blue_radius_background"
                 android:textColor="@color/my_dark_blue"

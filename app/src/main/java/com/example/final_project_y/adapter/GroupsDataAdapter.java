@@ -17,7 +17,7 @@ import com.example.final_project_y.model.Group;
 import java.util.List;
 
 public class GroupsDataAdapter extends RecyclerView.Adapter<GroupsDataAdapter.MyViewHolder>  {
-    List<Group> groupsList;
+    List<Group> groupsList; //اخت المصفوفة
     public SelectedItem selectedItem;
     Context context;
 
@@ -33,7 +33,7 @@ public class GroupsDataAdapter extends RecyclerView.Adapter<GroupsDataAdapter.My
             super(view);
             group_btn = view.findViewById(R.id.btn_group);
 
-            group_btn.setOnClickListener(view1 -> selectedItem.selectedItem(groupsList.get(getAdapterPosition())));
+            group_btn.setOnClickListener(view1 -> selectedItem.selectedItem(groupsList.get(getAdapterPosition())));// لجلب ال Position للعنصر الى تم الضغط عليه
         }
     }
 
@@ -53,7 +53,6 @@ public class GroupsDataAdapter extends RecyclerView.Adapter<GroupsDataAdapter.My
     public int getItemCount() {
         return groupsList.size();
     }
-
 
     public interface SelectedItem{
         void selectedItem(Group group);

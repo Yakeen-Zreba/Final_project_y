@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.Cache;
 import com.android.volley.VolleyLog;
@@ -45,15 +46,23 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
     Context context;
     SessionManager session;
     private ImageView main_pic;
+    TextView name_tv;
+    String name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // to hide ActionBar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
+        //-------------
 
         setContentView(R.layout.activity_groups);
+
+        name_tv=findViewById(R.id.user_name);
+
         context = this;
         mAdapter = new GroupsDataAdapter(groupsList, this, context);
         session = new SessionManager(this);
@@ -130,6 +139,5 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
         i.putExtra("group_name",group.getName());
         i.putExtra("teacher_name",group.getTeacher_name());
         startActivity(i);
-
     }
 }

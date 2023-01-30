@@ -24,7 +24,6 @@
                 android:id="@+id/assignment_title_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
                 android:textSize="26sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"

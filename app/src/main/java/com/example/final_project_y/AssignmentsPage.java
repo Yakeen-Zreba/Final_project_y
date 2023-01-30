@@ -45,8 +45,8 @@ public class AssignmentsPage extends AppCompatActivity {
         back_to_inside_group_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_back_inside_group_page= new Intent(AssignmentsPage.this, InsideGroupPage.class);
-                startActivity(i_back_inside_group_page);
+               // Intent i_back_inside_group_page= new Intent(AssignmentsPage.this, InsideGroupPage.class);
+               // startActivity(i_back_inside_group_page);
             }
         });
         //--------------------------------------------------------
