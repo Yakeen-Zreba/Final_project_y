@@ -95,9 +95,11 @@ import java.util.Objects;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
+            //hide ActionBar
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
             Objects.requireNonNull(getSupportActionBar()).hide();
+            //---------
 
             setContentView(R.layout.activity_assignments);
             Bundle extras = getIntent().getExtras();
@@ -180,7 +182,6 @@ import java.util.Objects;
             Intent i = new Intent(AssignmentsActivity.this, AssignmentActivity.class);
             i.putExtra("assignment_id",assignment.getId());
             startActivity(i);
-
         }
     }
 
