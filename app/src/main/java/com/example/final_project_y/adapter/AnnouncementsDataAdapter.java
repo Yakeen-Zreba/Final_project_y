@@ -21,7 +21,7 @@ public class AnnouncementsDataAdapter extends RecyclerView.Adapter<Announcements
         public MyViewHolder(View view) {
             super(view);
             content = view.findViewById(R.id.content);
-            due_date = view.findViewById(R.id.due_date);
+        //    due_date = view.findViewById(R.id.due_date);
 
 
         }

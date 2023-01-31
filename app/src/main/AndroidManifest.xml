@@ -95,9 +95,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".AssignmentsPage"
-            android:exported="true" />
-        <activity
             android:name=".activity.LinkActivity"
             android:exported="false">
             <meta-data

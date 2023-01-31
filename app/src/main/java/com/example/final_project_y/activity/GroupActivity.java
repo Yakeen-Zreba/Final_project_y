@@ -61,7 +61,7 @@ public class GroupActivity extends AppCompatActivity {
         //init views
         btn_assignment = (Button) findViewById(R.id.btn_assignment);
         btn_material = (Button) findViewById(R.id.btn_material);
-        btn_enquiry = (Button) findViewById(R.id.btn_enquiry);
+        //btn_enquiry = (Button) findViewById(R.id.btn_enquiry);
         btn_notification = (Button) findViewById(R.id.btn_notification);
         btn_add_files = (Button) findViewById(R.id.btn_add_files);
         back_to_main_page=(ImageView) findViewById(R.id.back_to_main_page);
