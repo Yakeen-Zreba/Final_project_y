@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.android.volley.Cache;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.NetworkImageView;
 import com.example.final_project_y.AppController;
 import com.example.final_project_y.R;
 import com.example.final_project_y.SessionManager;
@@ -30,6 +31,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,14 +43,15 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
 
     private static final String TAG = GroupsActivity.class.getSimpleName();
 
+    TextView name_tv,spec_tv,id_tv;
+
+    String name,specialization,image_link,student_id;
+
     private final List<Group> groupsList = new ArrayList<>();
     private GroupsDataAdapter mAdapter;
     Context context;
     SessionManager session;
-    private ImageView main_pic;
-    TextView name_tv;
-    String name;
-
+    private NetworkImageView main_pic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +91,7 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
             GrabAllGroups();
         }
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        main_pic = (ImageView) findViewById(R.id.main_pic);
+        main_pic = (NetworkImageView) findViewById(R.id.profile_stu_img);
 
         //Back arrow to main page
         main_pic.setOnClickListener(view -> {
@@ -118,6 +121,17 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
     private void parseJsonFeed(JSONObject response) {
         try {
             JSONArray feedArray = response.getJSONArray("data");
+            JSONObject profileObj = (JSONObject) response.getJSONObject("profile");
+
+            name = profileObj.getString("full_name");
+            specialization = profileObj.getString("specialization");
+            image_link = profileObj.getString("u_img");
+            student_id = profileObj.getString("stu_id");
+
+            name_tv.setText(name);
+           // spec_tv.setText(specialization);
+          //  id_tv.setText(student_id);
+            loadImage(  AVATAR_LINK + image_link);
             for (int i = 0; i < feedArray.length(); i++) {
                 JSONObject feedObj = (JSONObject) feedArray.get(i);
                 Group group = new Group();
@@ -130,7 +144,13 @@ public class GroupsActivity extends AppCompatActivity implements GroupsDataAdapt
             }
         } catch (JSONException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+    }
+    private void loadImage(String image_link) throws IOException {
+        main_pic.setDefaultImageResId(R.drawable.circle_shape); // image for loading...
+        main_pic.setImageUrl(image_link, AppController.getInstance().getImageLoader());
     }
     @Override
     public void selectedItem(Group group) {

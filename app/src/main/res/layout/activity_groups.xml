@@ -21,13 +21,12 @@
             android:layout_height="150dp"
             android:layout_alignParentEnd="true"
             android:gravity="center">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/main_pic"
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/profile_stu_img"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/profile_image_girl"/>
-
+                android:src="@drawable/profile_image_girl"
+                />
         </LinearLayout>
 
         <TextView
