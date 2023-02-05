@@ -2,7 +2,8 @@ package com.example.final_project_y;
 
 public class COMMON {
     public static  String BASE_URL = "http://10.0.2.2/finally/public/api/";
-    public static  String FILES_LINK = "http://filelinke.com/download/";
+    public static  String FILES_LINK = "http://10.0.2.2/final-project-php-master/sources/files/";
+    public static  String AVATAR_LINK = "http://10.0.2.2/final-project-php-master/sources/image/";
 
     public static  String GROUPS_URL = BASE_URL + "groups";
     public static  String ASSIGNMENTS_URL = BASE_URL + "assignments";

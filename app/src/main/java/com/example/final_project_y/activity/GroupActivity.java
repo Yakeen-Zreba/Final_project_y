@@ -5,16 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.final_project_y.MainPage;
 import com.example.final_project_y.R;
-import com.example.final_project_y.model.Announcement;
 import com.example.final_project_y.model.Group;
 
 public class GroupActivity extends AppCompatActivity {
@@ -64,7 +61,7 @@ public class GroupActivity extends AppCompatActivity {
         //init views
         btn_assignment = (Button) findViewById(R.id.btn_assignment);
         btn_material = (Button) findViewById(R.id.btn_material);
-        btn_enquiry = (Button) findViewById(R.id.btn_enquiry);
+        //btn_enquiry = (Button) findViewById(R.id.btn_enquiry);
         btn_notification = (Button) findViewById(R.id.btn_notification);
         btn_add_files = (Button) findViewById(R.id.btn_add_files);
         back_to_main_page=(ImageView) findViewById(R.id.back_to_main_page);

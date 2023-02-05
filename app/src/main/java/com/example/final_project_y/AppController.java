@@ -12,11 +12,11 @@ public class AppController  extends Application {
 
     public static final String TAG = AppController.class.getSimpleName();
 
-    private RequestQueue mRequestQueue;
+    private RequestQueue mRequestQueue; //يتم فيه وضع جميع الطلبات في قائمة الانتظار التي يجب تنفيذها
 
     private static AppController mInstance;
 
-    private ImageLoader imageLoader;
+    private ImageLoader imageLoader; //مكتبة لتحويل الصور التى تم جلبها الى صيغة ال ImageView
 
     @Override
     public void onCreate() {

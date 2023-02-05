@@ -133,7 +133,6 @@
             android:id="@+id/login_button"
             android:layout_width="340dp"
             android:layout_height="56dp"
-            android:layout_below="@id/edText2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="0dp"

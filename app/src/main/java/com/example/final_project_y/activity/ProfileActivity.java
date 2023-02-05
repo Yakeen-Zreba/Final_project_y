@@ -1,6 +1,7 @@
 package com.example.final_project_y.activity;
 
 import static com.android.volley.Request.Method.GET;
+import static com.example.final_project_y.COMMON.AVATAR_LINK;
 import static com.example.final_project_y.COMMON.FILES_LINK;
 import static com.example.final_project_y.COMMON.GROUPS_URL;
 import static com.example.final_project_y.COMMON.PROFILE_URL;
@@ -10,11 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     TextView name_tv,spec_tv,id_tv;
     ImageView avatar;
+    private ImageView back_to_main_page;
     String name,specialization,image_link,student_id;
     Button logOutBtn;
     Context context;
@@ -51,7 +56,20 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // remove title bar and hide the action bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        //---------------
+
         setContentView(R.layout.activity_profile);
+
+
+        //to Disable landscape orientation
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //------------------------------------------------------
+
         context = this;
         session = new SessionManager(context);
 
@@ -62,6 +80,12 @@ public class ProfileActivity extends AppCompatActivity {
         spec_tv = findViewById(R.id.text_view_stu_spec);
         id_tv = findViewById(R.id.text_view_stu_id);
         //avatar = findViewById(R.id.profile_stu_img);
+        back_to_main_page=(ImageView) findViewById(R.id.back_to_main_page);
+
+        //Back arrow to main page
+        back_to_main_page.setOnClickListener(view -> {
+            super.onBackPressed();
+        });
 
         logOutBtn.setOnClickListener(view -> {
             context.getSharedPreferences("file_share_app", 0).edit().clear().apply();
@@ -114,7 +138,7 @@ public class ProfileActivity extends AppCompatActivity {
             name_tv.setText(name);
             spec_tv.setText(specialization);
             id_tv.setText(student_id);
-            loadImage("https://picsum.photos/400");// + FILES_LINK + image_link);
+            loadImage(  AVATAR_LINK + image_link);
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -128,7 +152,7 @@ public class ProfileActivity extends AppCompatActivity {
 //        avatar.setImageBitmap(image);
 
         NetworkImageView nv = (NetworkImageView) findViewById(R.id.profile_stu_img);
-        nv.setDefaultImageResId(R.drawable.profile_image_girl); // image for loading...
+        nv.setDefaultImageResId(R.drawable.circle_shape); // image for loading...
         nv.setImageUrl(image_link, AppController.getInstance().getImageLoader());
 
     }

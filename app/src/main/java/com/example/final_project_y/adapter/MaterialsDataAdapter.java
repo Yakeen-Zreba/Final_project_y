@@ -47,8 +47,7 @@ public class MaterialsDataAdapter extends RecyclerView.Adapter<MaterialsDataAdap
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Material Material = MaterialsList.get(position);
-        holder.title.setText(Material.getTitle());
-
+        holder.open_btn.setText(Material.getTitle());
 
     }
 

@@ -21,11 +21,11 @@ public class AssignmentsDataAdapter extends RecyclerView.Adapter<AssignmentsData
     Context context;
     public
     class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title;
+        //public TextView title;
         public Button open_btn;
         public MyViewHolder(View view) {
             super(view);
-            title = view.findViewById(R.id.assignment_title_tv);
+            //title = view.findViewById(R.id.assignment_title_tv);
             open_btn = view.findViewById(R.id.btn_open_assignment);
             open_btn.setOnClickListener(view1 -> selectedItem.selectedItem(AssignmentsList.get(getAdapterPosition())));
         }
@@ -41,17 +41,13 @@ public class AssignmentsDataAdapter extends RecyclerView.Adapter<AssignmentsData
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_assignment, parent, false);
-
         return new MyViewHolder(itemView);
     }
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Assignment Assignment = AssignmentsList.get(position);
-        holder.title.setText(Assignment.getTitle());
-
-
+        holder.open_btn.setText(Assignment.getTitle());
     }
-
     public interface SelectedItem{
         void selectedItem(Assignment assignment);
     }

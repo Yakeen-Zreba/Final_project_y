@@ -2,14 +2,13 @@ package com.example.final_project_y.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,10 +17,8 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.example.final_project_y.AppController;
 import com.example.final_project_y.COMMON;
-import com.example.final_project_y.MainPage;
 import com.example.final_project_y.R;
 import com.example.final_project_y.SessionManager;
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,6 +39,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // to hide nav
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Objects.requireNonNull(getSupportActionBar()).hide();
+        //-----------
+
         setContentView(R.layout.activity_login);
         session = new SessionManager(this);
         inputPassword = findViewById(R.id.password);
@@ -63,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(TAG, "P:" + full_name + "//W:" + password);
                     login();
                 } else {
-                    //   Toast.makeText(getApplicationContext(), R.string.please_enter_credentials, Toast.LENGTH_LONG).show();
+                       Toast.makeText(getApplicationContext(), R.string.please_enter_credentials, Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -76,8 +80,8 @@ public class LoginActivity extends AppCompatActivity {
 
     /* to link the login page with the main page (method)*/
     public void openMainPage() {
-        Intent intent=new Intent(this, MainPage.class);
-        startActivity(intent);
+    //    Intent intent=new Intent(this, MainPage.class);
+    //    startActivity(intent);
     }
 
 /*--------------------------------------------------------------------------*/
@@ -125,13 +129,13 @@ public class LoginActivity extends AppCompatActivity {
                         COMMON.CURRENT_USER_PASSWORD = password;
                         COMMON.CURRENT_USER_EMAIL = full_name;
                         status = true;
-                        session.setEmailPassword(full_name, password, status);
+                        session.setEmailPassword(full_name, password, status); // لتعبأت ال sharedPreferences بالقيم
                         startActivity(new Intent(LoginActivity.this, GroupsActivity.class));
                         finish();
                     } else {
                         String errorMsg = jObj.getString("message");
                         Log.e(TAG,errorMsg);
-                        //Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -12,27 +12,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.android.volley.Cache;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.final_project_y.AppController;
-import com.example.final_project_y.AssignmentsPage;
 
 import com.example.final_project_y.R;
 import com.example.final_project_y.SessionManager;
 import com.example.final_project_y.adapter.AssignmentsDataAdapter;
-import com.example.final_project_y.adapter.AssignmentsDataAdapter;
-import com.example.final_project_y.adapter.GroupsDataAdapter;
 import com.example.final_project_y.model.Assignment;
 
 import org.json.JSONArray;
@@ -46,41 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import static com.android.volley.Request.Method.GET;
-import static com.example.final_project_y.COMMON.*;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Window;
-import android.view.WindowManager;
-
-import com.android.volley.Cache;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.final_project_y.AppController;
-import com.example.final_project_y.R;
-import com.example.final_project_y.adapter.AssignmentsDataAdapter;
-import com.example.final_project_y.model.Assignment;
-import com.example.final_project_y.model.Group;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-
-    public class AssignmentsActivity extends AppCompatActivity implements AssignmentsDataAdapter.SelectedItem {
+public class AssignmentsActivity extends AppCompatActivity implements AssignmentsDataAdapter.SelectedItem {
 
         private static final String TAG = AssignmentsActivity.class.getSimpleName();
 
@@ -95,9 +54,11 @@ import java.util.Objects;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
+            //hide ActionBar
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
             Objects.requireNonNull(getSupportActionBar()).hide();
+            //---------
 
             setContentView(R.layout.activity_assignments);
             Bundle extras = getIntent().getExtras();
@@ -180,7 +141,6 @@ import java.util.Objects;
             Intent i = new Intent(AssignmentsActivity.this, AssignmentActivity.class);
             i.putExtra("assignment_id",assignment.getId());
             startActivity(i);
-
         }
     }
 
