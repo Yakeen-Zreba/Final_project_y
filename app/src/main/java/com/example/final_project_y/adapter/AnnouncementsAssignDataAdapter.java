@@ -52,6 +52,7 @@ public class AnnouncementsAssignDataAdapter extends RecyclerView.Adapter<Announc
         AnnouncementAssign AnnouncementAssign = AnnouncementsList.get(position);
         holder.content.setText(AnnouncementAssign.getContent());
         holder.create_date.setText(AnnouncementAssign.getContent());
+
         holder.due_date.setText(AnnouncementAssign.getDueDate());
         holder.grade.setText(""+AnnouncementAssign.getGrade()+"");
     }
