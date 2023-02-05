@@ -3,8 +3,8 @@ package com.example.final_project_y.model;
 import java.util.ArrayList;
 
 public class Announcement {
-    int id,grade;
-    String content,dueDate;
+    int id;
+    String content;
 
     public Announcement() {
     }
@@ -17,13 +17,6 @@ public class Announcement {
         this.id = id;
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
 
     public String getContent() {
         return content;
@@ -33,11 +26,4 @@ public class Announcement {
         this.content = content;
     }
 
-    public String getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
-    }
 }

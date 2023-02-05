@@ -17,7 +17,7 @@ import com.example.final_project_y.model.Group;
 public class GroupActivity extends AppCompatActivity {
 
     private TextView group_name,teacher_name,group_code;
-    private Button btn_assignment,btn_material,btn_enquiry,btn_notification,btn_add_files;
+    private Button btn_assignment,btn_material,btn_announcement_assignment,btn_notification,btn_add_files;
     private ImageView back_to_main_page;
     private Group group;
 
@@ -51,6 +51,8 @@ public class GroupActivity extends AppCompatActivity {
         teacher_name =  findViewById(R.id.t_name);
         group_code =  findViewById(R.id.g_no);
 
+
+
         if(group!=null){
             group_name.setText(" " + group.getName() + " ");
             teacher_name.setText(" " + group.getTeacher_name() + " ");
@@ -61,7 +63,7 @@ public class GroupActivity extends AppCompatActivity {
         //init views
         btn_assignment = (Button) findViewById(R.id.btn_assignment);
         btn_material = (Button) findViewById(R.id.btn_material);
-        //btn_enquiry = (Button) findViewById(R.id.btn_enquiry);
+        btn_announcement_assignment =  findViewById(R.id.btn_announcement_assignment);
         btn_notification = (Button) findViewById(R.id.btn_notification);
         btn_add_files = (Button) findViewById(R.id.btn_add_files);
         back_to_main_page=(ImageView) findViewById(R.id.back_to_main_page);
@@ -88,6 +90,11 @@ public class GroupActivity extends AppCompatActivity {
 
         btn_notification.setOnClickListener(view -> {
             Intent intent= new Intent(GroupActivity.this, AnnouncementsActivity.class);
+            intent.putExtra("group_id", group.getId());
+            startActivity(intent);
+        });
+        btn_announcement_assignment.setOnClickListener(view -> {
+            Intent intent= new Intent(GroupActivity.this, AnnouncementsAssignActivity.class);
             intent.putExtra("group_id", group.getId());
             startActivity(intent);
         });
